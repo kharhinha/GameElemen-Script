@@ -24,7 +24,9 @@ public class EnemyIA : MonoBehaviour
     //variables
     [SerializeField]
     private float speedMove=5.0f;
+#pragma warning disable CS0414 // El campo 'EnemyIA.nivelVida' está asignado pero su valor nunca se usa
     private float nivelVida = 30.0f;
+#pragma warning restore CS0414 // El campo 'EnemyIA.nivelVida' está asignado pero su valor nunca se usa
     private float nivelAtaque = 15.0f;
 
     

@@ -30,9 +30,9 @@ public class ControlAnimacion
     }
     public void AnimacionDead()
     {
-        animacion.SetBool("dead", true);
         animacion.SetBool("atacar", false);
         animacion.SetBool("gritar", false);
         animacion.SetBool("damage", false);
+        animacion.SetBool("dead", true);
     }
 }
