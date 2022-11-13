@@ -28,7 +28,6 @@ public  class EnemyPoo : MonoBehaviour
         animacion = GetComponent<Animator>();
         rigBody = GetComponent<Rigidbody>();
         controlAnimacion = new ControlAnimacion(animacion);
-        //Debug.Log("ver jugador; Awake Poo: " + jugador);
     }
 
     public float recibeDamage(float damage)
@@ -36,11 +35,9 @@ public  class EnemyPoo : MonoBehaviour
         return nivelVida -= damage;
     }
 
-    public void comprobarVida()
+    //todavia no pruebo esta parte
+    public bool comprobarVida()
     {
-        if (nivelVida <= 0)
-        {
-            Debug.Log("vida baja");
-        }
+        return nivelVida > 0;
     }
 }

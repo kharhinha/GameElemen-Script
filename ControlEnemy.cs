@@ -39,6 +39,10 @@ public class ControlEnemy : EnemyPoo
             controlAnimacion.AnimacionIdle();
         }
 
+        if (!comprobarVida()){
+            controlAnimacion.AnimacionDead();
+            Debug.Log("dead");
+        }
 
     }
 
@@ -47,5 +51,20 @@ public class ControlEnemy : EnemyPoo
         jugador.reciboDamage(nivelDeAtaque);
     }
 
-    
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "espada"){
+            ///------ Seccion de prueba
+            if (comprobarVida())
+            {
+                controlAnimacion.AnimacionDamage();
+                recibeDamage(jugador.nivelAtaque);
+            }
+            else
+            {
+                controlAnimacion.AnimacionDead();
+            }
+        }
+       
+    }
 }
